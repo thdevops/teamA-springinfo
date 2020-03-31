@@ -28,7 +28,7 @@ public class ServerinfoApplication {
 		String appName = cfVars.getString("application_name");
 
 
-		return String.format("{'organization': '%s', 'space': '%s', 'app': '%s'}", organization, space, appName);
+		return String.format("{\"organization\": \"%s\", \"space\": \"%s\", \"app\": \"%s\"}", organization, space, appName);
 		//return String.format("<h1>Springinfo - Java Serverinfo</h1><p>Organization name : %s</p><p>Space name : %s</p><p>Application name : %s</p>", organization, space, appName);
 	}
 	
