@@ -20,6 +20,8 @@ public class ServerinfoApplication {
 		String env = System.getenv("VCAP_SERVICES");
 		if (env == null) return ("Error : not running on Cloud Foundry environment");
 
+		System.out.println(env);
+
 		JSONObject cfVars = new JSONObject(env);
 		String space = cfVars.getString("space_name");
 		String organization = cfVars.getString("organization_name");
