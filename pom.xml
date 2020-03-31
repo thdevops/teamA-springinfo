@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bcgplatinion</groupId>
-	<artifactId>serverinfo</artifactId>
+	<artifactId>springinfo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>serverinfo</name>
