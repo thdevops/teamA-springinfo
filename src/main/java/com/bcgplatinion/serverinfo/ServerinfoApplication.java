@@ -15,8 +15,9 @@ public class ServerinfoApplication {
 		SpringApplication.run(ServerinfoApplication.class, args);
 	}
 
-	@GetMapping("/")
-	public String root() {
+	@GetMapping(value = "/serverinfos", headers = "application/json")
+	public String getServerInfos() {
+
 		String env = System.getenv("VCAP_APPLICATION");
 		if (env == null) return ("Error : not running on Cloud Foundry environment");
 
@@ -25,7 +26,9 @@ public class ServerinfoApplication {
 		String organization = cfVars.getString("organization_name");
 		String appName = cfVars.getString("application_name");
 
-		return String.format("<h1>Springinfo - Java Serverinfo</h1><p>Organization name : %s</p><p>Space name : %s</p><p>Application name : %s</p>", organization, space, appName);
+
+		return String.format("{'organization': '%s', 'space': '%s', 'app': '%s'}", organization, space, appName);
+		//return String.format("<h1>Springinfo - Java Serverinfo</h1><p>Organization name : %s</p><p>Space name : %s</p><p>Application name : %s</p>", organization, space, appName);
 	}
 	
 	@GetMapping("/hello")
