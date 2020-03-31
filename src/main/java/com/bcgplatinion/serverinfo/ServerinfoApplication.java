@@ -2,6 +2,7 @@ package com.bcgplatinion.serverinfo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,7 @@ public class ServerinfoApplication {
 		SpringApplication.run(ServerinfoApplication.class, args);
 	}
 
-	@GetMapping(value = "/serverinfos", headers = "application/json")
+	@GetMapping(path = "/serverinfos", produces = "application/json")
 	public String getServerInfos() {
 
 		String env = System.getenv("VCAP_APPLICATION");
