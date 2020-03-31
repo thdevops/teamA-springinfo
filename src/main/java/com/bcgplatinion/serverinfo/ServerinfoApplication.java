@@ -17,7 +17,7 @@ public class ServerinfoApplication {
 
 	@GetMapping("/")
 	public String root() {
-		String env = System.getenv("VCAP_SERVICES");
+		String env = System.getenv("VCAP_APPLICATION");
 		if (env == null) return ("Error : not running on Cloud Foundry environment");
 
 		System.out.println(env);
