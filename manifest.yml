@@ -3,5 +3,6 @@ applications:
   - name: springinfo
     buildpacks:
       - java_buildpack
-    path: target/springinfo-1.0.0.BUILD-SNAPSHOT.jar
+    path: target/springinfo-0.0.2-SNAPSHOT.war
+
 
