@@ -4,6 +4,3 @@ applications:
     buildpacks:
       - java_buildpack
     path: target/springinfo-0.0.3-SNAPSHOT.war
-    memory: 256M
-
-
