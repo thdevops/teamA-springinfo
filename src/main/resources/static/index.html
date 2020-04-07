@@ -34,7 +34,7 @@
             method: 'GET'
         }
     
-        fetch("/serverinfos", options).then(async res => {
+        fetch("/api/serverinfos", options).then(async res => {
             const serverInfos = await res.json();
             document.getElementById("organization_name").innerHTML = serverInfos.organization;
             document.getElementById("space_name").innerHTML = serverInfos.space;
