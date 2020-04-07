@@ -34,7 +34,7 @@
             method: 'GET'
         }
     
-        fetch("/serverinfos", options).then(async res => {
+        fetch("/api/serverinfos", options).then(async res => {
             const serverInfos = await res.json();
             document.getElementById("organization_name").innerHTML = serverInfos.organization;
             document.getElementById("space_name").innerHTML = serverInfos.space;
@@ -43,7 +43,7 @@
     }
 
 </script>
-<h1>Springinfo - Java Server Info - 0.0.3</h1>
+<h1>Springinfo - Java Server Info - 0.0.4</h1>
 <div>
     <ul>
         <li>Organization name : <span id = "organization_name"></span></li>

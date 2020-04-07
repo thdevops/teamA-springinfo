@@ -16,7 +16,7 @@ public class ServerinfoApplication {
 		SpringApplication.run(ServerinfoApplication.class, args);
 	}
 
-	@GetMapping(path = "/serverinfos", produces = "application/json")
+	@GetMapping(path = "/api/serverinfos", produces = "application/json")
 	public String getServerInfos() {
 
 		String env = System.getenv("VCAP_APPLICATION");
@@ -31,7 +31,7 @@ public class ServerinfoApplication {
 		return String.format("{\"organization\": \"%s\", \"space\": \"%s\", \"app\": \"%s\"}", organization, space, appName);
 	}
 
-	@GetMapping(path = "/ping", produces = "application/json")
+	@GetMapping(path = "/api/ping", produces = "application/json")
 	public String ping() {
 
 		String env = System.getenv("VCAP_APPLICATION");
